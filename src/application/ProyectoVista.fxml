@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane onKeyPressed="#tecla" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ProyectoControlador">
+   <top>
+    
+    <MenuBar BorderPane.alignment="CENTER">
+      <menus>
+        <Menu mnemonicParsing="false" style="-fx-translate-x: -8;" text="Archivo">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#AbrirVentana"   text="Agregar Imágenes | Ctrl + N" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#EliminarImagen"           text="Eliminar imagen     | Ctrl + D" />
+            <MenuItem mnemonicParsing="false" onAction="#ExpI"           text="Exportar imagen    | Ctrl + E" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#CerrarPrograma" text="Cerrar" />
+          </items>
+        </Menu>
+         <Menu mnemonicParsing="false" style="-fx-translate-x: -8;" text="Gráficas">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#GraficaM0" text="Momento 0 |  F1" />
+            <MenuItem mnemonicParsing="false" onAction="#GraficaM1" text="Momento 1 | F2" />
+            <MenuItem mnemonicParsing="false" onAction="#GraficaM2" text="Momento 2 | F3" />
+            <MenuItem mnemonicParsing="false" onAction="#GraficaM3" text="Momento 3 | F4" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#GraficaTodos" text="Todos los momentos | Ctrl + M" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" style="-fx-translate-x: -8;" text="Ayuda">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#Acercade" text="Acerca de SCA | Ctrl + A" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+   </top>
+  <center>
+  
+  <ScrollPane fx:id="scroll" hbarPolicy="NEVER">
+     <content>
+            <GridPane fx:id="grid" alignment="CENTER">
+           
+         </GridPane>
+     </content>
+   </ScrollPane>
+   </center>
+     <bottom>
+     
+     	 <HBox prefHeight="25.0">
+         <children>
+         <Label fx:id="inicio" onMouseClicked="#MostrarInicio" text="  Inicio">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="textoProyecto" onMouseClicked="#MostrarProyecto" text="Proyecto">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            
+         </children>
+      </HBox>
+     </bottom>
+</BorderPane>
